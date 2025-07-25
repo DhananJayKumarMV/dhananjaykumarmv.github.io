@@ -1,145 +1,522 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Dhananjaya Kumar Mittapalli | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f4f6fa; color: #222; }
-      header { background: #222; color: #fff; padding: 2rem 0; text-align: center; }
-      .container { max-width: 900px; margin: 2rem auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 2rem; }
-      section { margin-bottom: 2.5rem; }
-      h2 { color: #2a4d69; }
-      .projects { display: flex; flex-wrap: wrap; gap: 1.5rem; }
-      .project-card { background: #f9f9f9; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); padding: 1.2rem; flex: 1 1 260px; min-width: 220px; }
-      .project-card h3 { margin-top: 0; }
-      .project-card a { color: #2a4d69; text-decoration: none; font-weight: bold; }
-      .skills-list { display: flex; flex-wrap: wrap; gap: 0.7rem; list-style: none; padding: 0; }
-      .skills-list li { background: #e3eaf2; padding: 0.4rem 1rem; border-radius: 20px; }
-      .contact a { margin-right: 1.2rem; color: #2a4d69; text-decoration: none; }
-      #resume { background: #f9f9f9; border-radius: 8px; padding: 1.5rem; }
-      .resume-section h3 { margin-top: 1rem; margin-bottom: 0.5rem; }
-      .resume-section ul { list-style: disc inside; margin-bottom: 1rem; }
-      .resume-section li { margin-bottom: 0.5rem; }
-      footer { text-align:center; padding:1.5rem 0; color:#888; font-size:0.95rem; }
-      @media (max-width: 600px) {
-        .container { padding: 1rem; }
-        .projects { flex-direction: column; }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Dhananjaya Kumar Mittapalli</h1>
-      <p>Web Developer | JavaScript Enthusiast | Open Source Contributor</p>
-      <nav>
-        <a href="#about" style="color:#fff; margin:0 1rem;">About</a>
-        <a href="#projects" style="color:#fff; margin:0 1rem;">Projects</a>
-        <a href="#skills" style="color:#fff; margin:0 1rem;">Skills</a>
-        <a href="#resume" style="color:#fff; margin:0 1rem;">Resume</a>
-        <a href="#contact" style="color:#fff; margin:0 1rem;">Contact</a>
-      </nav>
-    </header>
-    <div class="container">
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          Hi! I'm Dhananjaya Kumar Mittapalli, a passionate web developer with a love for building beautiful and functional websites. I enjoy working with modern web technologies and always strive to learn and grow.
-        </p>
-      </section>
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-          <!-- GitHub projects will be loaded here -->
-          <div>Loading projects from GitHub...</div>
-        </div>
-      </section>
-      <section id="skills">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>Git</li>
-          <li>Figma</li>
-          <!-- Add more skills as needed -->
-        </ul>
-      </section>
-      <section id="resume">
-        <h2>Resume</h2>
-        <div class="resume-section">
-          <h3>Experience</h3>
-          <ul>
-            <li>
-              <strong>Frontend Developer</strong> at Example Corp (2022–Present)<br>
-              <span>Developed responsive web applications using React, improved site performance by 30%, and collaborated with designers to deliver user-friendly interfaces.</span>
-            </li>
-            <li>
-              <strong>Web Developer Intern</strong> at WebStart (2021–2022)<br>
-              <span>Assisted in building client websites, maintained codebases, and learned best practices in modern JavaScript and CSS.</span>
-            </li>
-          </ul>
-          <h3>Education</h3>
-          <ul>
-            <li>
-              <strong>B.Sc. in Computer Science</strong>, University Name (2018–2022)
-            </li>
-          </ul>
-          <h3>Certifications</h3>
-          <ul>
-            <li>Responsive Web Design, freeCodeCamp</li>
-            <li>JavaScript Algorithms and Data Structures, freeCodeCamp</li>
-          </ul>
-          <a href="https://yourdomain.com/your_resume.pdf" target="_blank">Download Resume (PDF)</a>
-        </div>
-      </section>
-      <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Let's connect! Reach out via email or find me on social media:</p>
-        <a href="mailto:your.email@example.com">Email</a>
-        <a href="https://github.com/DhananJayKumarMV" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/dhananjaya-kumar-venkata-mittapalli/" target="_blank">LinkedIn</a>
-      </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dhananjaya Kumar Venkata Mittapalli | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts for anime style -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #f4f6fa 60%, #f7e1ff 100%);
+      color: #222;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(90deg, #2a4d69 60%, #a259c6 100%);
+      color: #fff;
+      padding: 2.5rem 0 2rem 0;
+      text-align: center;
+      position: relative;
+    }
+    .anime-header {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 2.7rem;
+      letter-spacing: 2px;
+      color: #ffe066;
+      text-shadow: 2px 2px 0 #222, 0 0 10px #a259c6;
+      margin-bottom: 0.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+    }
+    .anime-header img {
+      height: 2.5rem;
+      vertical-align: middle;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(162,89,198,0.2);
+      background: #fff;
+    }
+    .subtitle {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      color: #ffe066;
+      margin-bottom: 1.2rem;
+      letter-spacing: 1px;
+    }
+    nav {
+      margin-top: 1.2rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1.1rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.05rem;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #ffe066;
+      text-shadow: 0 0 6px #fff;
+    }
+    .container {
+      max-width: 950px;
+      margin: 2.5rem auto;
+      background: rgba(255,255,255,0.97);
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(162,89,198,0.10);
+      padding: 2.5rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    section {
+      margin-bottom: 2.7rem;
+    }
+    h2 {
+      color: #a259c6;
+      font-family: 'Permanent Marker', cursive;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .anime-badge {
+      font-size: 1.3rem;
+      background: #ffe066;
+      color: #a259c6;
+      border-radius: 8px;
+      padding: 0.1rem 0.7rem;
+      font-family: 'Orbitron', sans-serif;
+      margin-left: 0.5rem;
+      box-shadow: 0 1px 4px rgba(162,89,198,0.10);
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: flex-start;
+    }
+    .project-card {
+      background: linear-gradient(120deg, #f9f9f9 80%, #ffe0f7 100%);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(162,89,198,0.08);
+      padding: 1.3rem 1.1rem 1.1rem 1.1rem;
+      flex: 1 1 270px;
+      min-width: 220px;
+      max-width: 320px;
+      border: 2px solid #a259c6;
+      transition: transform 0.18s, box-shadow 0.18s;
+      position: relative;
+    }
+    .project-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(162,89,198,0.18);
+      border-color: #ffe066;
+    }
+    .project-card h3 {
+      margin-top: 0;
+      font-family: 'Permanent Marker', cursive;
+      color: #2a4d69;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .project-card a {
+      color: #a259c6;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.01rem;
+      display: inline-block;
+      margin-top: 0.5rem;
+      transition: color 0.2s;
+    }
+    .project-card a:hover {
+      color: #ffe066;
+      text-shadow: 0 0 6px #a259c6;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      list-style: none;
+      padding: 0;
+    }
+    .skills-list li {
+      background: linear-gradient(90deg, #ffe066 60%, #a259c6 100%);
+      color: #2a4d69;
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      box-shadow: 0 1px 4px rgba(162,89,198,0.07);
+      margin-bottom: 0.2rem;
+    }
+    #resume {
+      background: linear-gradient(120deg, #f9f9f9 80%, #e0e7ff 100%);
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 2px 8px rgba(162,89,198,0.07);
+    }
+    .resume-section h3 {
+      margin-top: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #2a4d69;
+      font-family: 'Permanent Marker', cursive;
+      font-size: 1.15rem;
+    }
+    .resume-section ul {
+      list-style: disc inside;
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+    }
+    .resume-section li {
+      margin-bottom: 0.7rem;
+      line-height: 1.6;
+    }
+    .resume-section strong {
+      color: #a259c6;
+    }
+    .resume-section a {
+      color: #a259c6;
+      text-decoration: underline;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.01rem;
+      margin-top: 0.7rem;
+      display: inline-block;
+    }
+    .contact a {
+      margin-right: 1.2rem;
+      color: #a259c6;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.05rem;
+      transition: color 0.2s;
+    }
+    .contact a:hover {
+      color: #ffe066;
+      text-shadow: 0 0 6px #a259c6;
+    }
+    .anime-section {
+      background: linear-gradient(90deg, #ffe066 60%, #a259c6 100%);
+      border-radius: 12px;
+      padding: 1.5rem 1.2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 2px 8px rgba(162,89,198,0.10);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .anime-section img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(162,89,198,0.15);
+      border: 3px solid #fff;
+      background: #fff;
+    }
+    .anime-section-content {
+      flex: 1;
+      min-width: 200px;
+    }
+    .anime-section h3 {
+      font-family: 'Permanent Marker', cursive;
+      color: #2a4d69;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .anime-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.5rem;
+    }
+    .anime-list span {
+      background: #fff;
+      color: #a259c6;
+      border-radius: 8px;
+      padding: 0.3rem 0.9rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      box-shadow: 0 1px 4px rgba(162,89,198,0.07);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      color: #888;
+      font-size: 1rem;
+      background: linear-gradient(90deg, #2a4d69 60%, #a259c6 100%);
+      color: #ffe066;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1px;
+      margin-top: 2rem;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+    /* Anime background accent */
+    .anime-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.13;
+      background: url('https://i.imgur.com/1Q9Z1Zm.png') repeat;
+      background-size: 300px 300px;
+      animation: bgmove 60s linear infinite;
+    }
+    @keyframes bgmove {
+      0% { background-position: 0 0; }
+      100% { background-position: 300px 300px; }
+    }
+    @media (max-width: 700px) {
+      .container { padding: 1rem; }
+      .projects { flex-direction: column; }
+      .anime-section { flex-direction: column; align-items: flex-start; }
+      .anime-section img { margin-bottom: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="anime-bg"></div>
+  <header>
+    <div class="anime-header">
+      <img src="https://i.imgur.com/8Q2QyQp.png" alt="Anime Avatar" />
+      Dhananjaya Kumar Venkata Mittapalli
+      <span class="anime-badge">Anime Fan</span>
     </div>
-    <footer>
-      &copy; 2024 Dhananjaya Kumar Mittapalli. Powered by Swize Template.
-    </footer>
-    <script>
-      // Fetch GitHub repositories and display them as project cards
-      document.addEventListener("DOMContentLoaded", function() {
-        const projectsContainer = document.querySelector('.projects');
-        if (!projectsContainer) return;
-  
-        fetch('https://api.github.com/users/DhananJayKumarMV/repos?sort=updated')
-          .then(response => response.json())
-          .then(repos => {
-            // Filter out forked repos and optionally filter by topics or names
-            const filtered = repos.filter(repo => !repo.fork);
-            projectsContainer.innerHTML = ''; // Clear loading message
-  
-            if (filtered.length === 0) {
-              projectsContainer.innerHTML = '<p>No public projects found on GitHub.</p>';
-              return;
-            }
-  
-            filtered.slice(0, 6).forEach(repo => {
-              const card = document.createElement('div');
-              card.className = 'project-card';
-              card.innerHTML = `
-                <h3>${repo.name.replace(/-/g, ' ')}</h3>
-                <p>${repo.description ? repo.description : 'No description provided.'}</p>
-                <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-              `;
-              projectsContainer.appendChild(card);
-            });
-          })
-          .catch(error => {
-            projectsContainer.innerHTML = '<p>Could not load projects from GitHub.</p>';
-            console.error(error);
+    <div class="subtitle">
+      Data Science Engineer | ML & Big Data | Anime Enthusiast
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#anime">Anime</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <section id="about">
+      <h2>About Me <span>👋</span></h2>
+      <p>
+        Hi! I'm Dhananjaya Kumar Venkata Mittapalli, a passionate Data Science Engineer and anime aficionado based in Boston, MA. I thrive on building scalable data solutions, automating workflows, and leveraging machine learning to solve real-world problems. When I'm not coding or analyzing data, you'll find me immersed in the world of anime, drawing inspiration from its creativity and storytelling.
+      </p>
+    </section>
+    <section id="anime" class="anime-section">
+      <img src="https://i.imgur.com/8Q2QyQp.png" alt="Anime Avatar" />
+      <div class="anime-section-content">
+        <h3>My Anime Side <span>🌸</span></h3>
+        <p>
+          Anime is more than a hobby—it's a source of inspiration, creativity, and joy! Here are some of my all-time favorite anime:
+        </p>
+        <div class="anime-list">
+          <span>Fullmetal Alchemist: Brotherhood</span>
+          <span>Attack on Titan</span>
+          <span>Death Note</span>
+          <span>One Piece</span>
+          <span>Steins;Gate</span>
+          <span>My Hero Academia</span>
+          <span>Demon Slayer</span>
+          <span>Jujutsu Kaisen</span>
+        </div>
+        <p style="margin-top:0.7rem;">
+          I love how anime blends art, technology, and storytelling—just like data science!
+        </p>
+      </div>
+    </section>
+    <section id="projects">
+      <h2>Projects <span>🚀</span></h2>
+      <div class="projects">
+        <!-- GitHub projects will be loaded here -->
+        <div>Loading projects from GitHub...</div>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>Skills <span>🛠️</span></h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>R</li>
+        <li>Pandas</li>
+        <li>Scikit-learn</li>
+        <li>Apache Spark</li>
+        <li>Apache Airflow</li>
+        <li>Fivetran</li>
+        <li>DBT</li>
+        <li>Databricks</li>
+        <li>EDA</li>
+        <li>Hypothesis Testing</li>
+        <li>Classification</li>
+        <li>Forecasting</li>
+        <li>Adobe Analytics</li>
+        <li>NLP</li>
+        <li>Excel</li>
+        <li>Powerpoint</li>
+        <li>Word</li>
+        <li>Outlook</li>
+        <li>Snowflake</li>
+        <li>MySQL</li>
+        <li>Hadoop</li>
+        <li>MapReduce</li>
+        <li>Oracle</li>
+        <li>SaS</li>
+        <li>NoSQL</li>
+        <li>MongoDB</li>
+        <li>AWS</li>
+        <li>Azure</li>
+        <li>Docker</li>
+        <li>Kubernetes</li>
+        <li>Travis CI/CD</li>
+        <li>GIT</li>
+        <li>TensorFlow</li>
+        <li>Pytorch</li>
+        <li>JIRA</li>
+        <li>Microstrategy</li>
+        <li>Looker</li>
+        <li>Tableau</li>
+        <li>PowerBI</li>
+      </ul>
+    </section>
+    <section id="resume">
+      <h2>Resume <span>📄</span></h2>
+      <div class="resume-section">
+        <h3>Education</h3>
+        <ul>
+          <li>
+            <strong>Master of Science - Data Science</strong>, Northeastern University, Boston, MA (Sept 2023 - Present)
+            <br>
+            <em>Related Courses:</em> Data management and processing, Supervised and Unsupervised Machine Learning, Algorithms, MLOps, LLM
+          </li>
+        </ul>
+        <h3>Professional Experience</h3>
+        <ul>
+          <li>
+            <strong>Data Science Engineer</strong> at Natixis Investment Managers, Boston, MA, USA (Jan 2025 - Aug 2025)
+            <br>
+            <span>
+              • Developed a conversion attribution model to evaluate marketing-driven lead performance, enabling Sales to prioritize profitable client segments.<br>
+              • Engineered orchestration workflows using SQL, Python, and Rundeck to automate revenue pipeline refreshes, integrating trade activity, AUM movements, and CRM insights into Power BI dashboards.<br>
+              <b>Impact:</b> 15% increase in lead conversion rates, 40% faster daily reporting cycles.
+            </span>
+          </li>
+          <li>
+            <strong>Supply Chain Business Insight Engineer</strong> at SaksOFF5th, Bangalore, India (May 2022 - Aug 2023)
+            <br>
+            <span>
+              • Developed supply chain data architecture and performed statistical analysis to derive actionable insights.<br>
+              • Used SQL, Python, and Airflow to automate workflows, reducing processing time by 30%.<br>
+              <b>Impact:</b> Enabled launch of business initiatives, reduced report generation from 2 days to 4 hours.
+            </span>
+          </li>
+          <li>
+            <strong>Data Analyst</strong> at TheMathCompany, Bangalore, India (Sep 2020 - May 2022)
+            <br>
+            <span>
+              • Led a team to productionalize data migration solutions with AWS S3 and automated ETL pipelines via Airflow.<br>
+              • Developed Tableau and MicroStrategy dashboards for marketing KPIs.<br>
+              <b>Impact:</b> 140% increase in execution speed, <2% downtime, expanded team and projects due to client satisfaction.
+            </span>
+          </li>
+        </ul>
+        <h3>Academic Projects</h3>
+        <ul>
+          <li>
+            <strong>Smart City</strong> (Feb 2024 - Apr 2024), Northeastern University, Boston, MA<br>
+            <span>
+              • Leveraged Python, Spark, and Pandas to address urban challenges in Vancouver.<br>
+              • Used ML models (GBTRegressor, RandomForest, Linear Regression) to predict housing trends and CO2 emissions.<br>
+              • Created visualizations with Matplotlib and Folium for policy-making and urban development.
+            </span>
+          </li>
+          <li>
+            <strong>Blog Generation Application using LLaMA 2 and LangChain</strong> (June 2024 – Present), Northeastern University, Boston, MA<br>
+            <span>
+              • Built a Streamlit app for personalized blog generation using LLaMA 2 (7B), reducing manual content creation by 50%.<br>
+              • Achieved 90% accuracy in relevant content generation via LangChain and CTransformers.
+            </span>
+          </li>
+        </ul>
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>
+            <b>Big Data:</b> Python, R, Pandas, Scikit-learn, Apache Spark, Apache Airflow, Fivetran, DBT, Databricks
+          </li>
+          <li>
+            <b>Data Science:</b> EDA, Hypothesis Testing, Classification, Forecasting, Adobe Analytics, NLP
+          </li>
+          <li>
+            <b>DBMS:</b> Snowflake, MySQL, Hadoop, MapReduce, Oracle, SaS, NoSQL, MongoDB
+          </li>
+          <li>
+            <b>Cloud:</b> AWS (EMR, EC2, S3, Lambda, SageMaker), Azure (Synapse Analytics, Data Lake, Cosmos DB)
+          </li>
+          <li>
+            <b>DevOps:</b> Docker, Kubernetes, Travis CI/CD, GIT, TensorFlow, Pytorch, JIRA
+          </li>
+          <li>
+            <b>Reporting Tools:</b> Microstrategy, Looker, Tableau, PowerBI
+          </li>
+        </ul>
+        <a href="mailto:dhananjayakumarmittapalli@gmail.com">Request Full Resume (PDF)</a>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <h2>Contact <span>📬</span></h2>
+      <p>Let's connect! Reach out via email or find me on social media:</p>
+      <a href="mailto:dhananjayakumarmittapalli@gmail.com">Email</a>
+      <a href="https://github.com/dhananjayakumarmittapalli" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/dhananjayakumarmittapalli" target="_blank">LinkedIn</a>
+      <span style="display:inline-block; margin-left:1.2rem; color:#a259c6; font-family:'Permanent Marker',cursive;">Anime is life! <span style="font-size:1.2em;">✨</span></span>
+    </section>
+  </div>
+  <footer>
+    &copy; 2024 Dhananjaya Kumar Venkata Mittapalli. Powered by Swize Template. <span style="font-family:'Permanent Marker',cursive;">Anime forever!</span>
+  </footer>
+  <script>
+    // Fetch GitHub repositories and display them as project cards
+    document.addEventListener("DOMContentLoaded", function() {
+      const projectsContainer = document.querySelector('.projects');
+      if (!projectsContainer) return;
+
+      fetch('https://api.github.com/users/dhananjayakumarmittapalli/repos?sort=updated')
+        .then(response => response.json())
+        .then(repos => {
+          // Filter out forked repos and optionally filter by topics or names
+          const filtered = repos.filter(repo => !repo.fork);
+          projectsContainer.innerHTML = ''; // Clear loading message
+
+          if (filtered.length === 0) {
+            projectsContainer.innerHTML = '<p>No public projects found on GitHub.</p>';
+            return;
+          }
+
+          filtered.slice(0, 6).forEach(repo => {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            card.innerHTML = `
+              <h3>${repo.name.replace(/-/g, ' ')}</h3>
+              <p>${repo.description ? repo.description : 'No description provided.'}</p>
+              <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+            `;
+            projectsContainer.appendChild(card);
           });
-      });
-    </script>
-  </body>
-  </html>
+        })
+        .catch(error => {
+          projectsContainer.innerHTML = '<p>Could not load projects from GitHub.</p>';
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>
