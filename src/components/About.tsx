@@ -8,8 +8,12 @@ const About = () => {
         
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
           <div className="lg:w-1/3 flex justify-center">
-            <div className="w-64 h-64 bg-gradient-to-br from-primary/20 to-primary/40 rounded-2xl flex items-center justify-center">
-              <div className="text-6xl font-light text-primary">DM</div>
+            <div className="w-64 h-64 rounded-2xl overflow-hidden">
+              <img 
+                src="/lovable-uploads/f99e2395-b752-4726-9553-f99996e5df56.png" 
+                alt="Dhananjaya Kumar Mittapalli" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           
