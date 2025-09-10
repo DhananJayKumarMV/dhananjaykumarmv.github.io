@@ -5,30 +5,14 @@ const Education = () => {
       degree: "Master of Science in Data Science",
       location: "Boston, MA",
       period: "Sept 2023 - Present",
-      gpa: "GPA: 3.8/4.0",
+      gpa: "GPA: 3.9/4.0",
       courses: [
         "Data Management and Processing",
         "Supervised and Unsupervised Machine Learning", 
         "Algorithms",
         "MLOps",
         "Large Language Models",
-        "Deep Learning",
         "Natural Language Processing"
-      ]
-    },
-    {
-      institution: "Vellore Institute of Technology",
-      degree: "Bachelor of Technology in Computer Science and Engineering",
-      location: "Vellore, India",
-      period: "2016 - 2020",
-      gpa: "GPA: 8.2/10.0",
-      courses: [
-        "Data Structures and Algorithms",
-        "Database Management Systems",
-        "Software Engineering",
-        "Computer Networks",
-        "Operating Systems",
-        "Machine Learning Fundamentals"
       ]
     }
   ];

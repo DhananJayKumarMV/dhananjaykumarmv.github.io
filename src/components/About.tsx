@@ -6,19 +6,27 @@ const About = () => {
           About Me
         </h2>
         
-        <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
-          <p className="mb-6">
-            I'm a passionate Data Science Engineer with expertise in machine learning, big data processing, 
-            and analytics. Currently pursuing my Master's in Data Science at Northeastern University, 
-            I have hands-on experience building scalable data solutions and automating complex workflows.
-          </p>
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+          <div className="lg:w-1/3 flex justify-center">
+            <div className="w-64 h-64 bg-gradient-to-br from-primary/20 to-primary/40 rounded-2xl flex items-center justify-center">
+              <div className="text-6xl font-light text-primary">DM</div>
+            </div>
+          </div>
           
-          <p>
-            My professional journey spans across various industries where I've successfully implemented 
-            data-driven solutions, developed predictive models, and created actionable insights that drive 
-            business decisions. I bring hands-on experience with Python, R, SQL, cloud technologies, 
-            and AI frameworks — applying them in real-world projects across analytics, automation, and intelligent systems.
-          </p>
+          <div className="lg:w-2/3 prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+            <p className="mb-6">
+              I'm a passionate Data Science Engineer with expertise in machine learning, big data processing, 
+              and analytics. Currently pursuing my Master's in Data Science at Northeastern University, 
+              I have hands-on experience building scalable data solutions and automating complex workflows.
+            </p>
+            
+            <p>
+              My professional journey spans across various industries where I've successfully implemented 
+              data-driven solutions, developed predictive models, and created actionable insights that drive 
+              business decisions. I bring hands-on experience with Python, R, SQL, cloud technologies, 
+              and AI frameworks — applying them in real-world projects across analytics, automation, and intelligent systems.
+            </p>
+          </div>
         </div>
       </div>
     </section>

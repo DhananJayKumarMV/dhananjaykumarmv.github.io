@@ -1,27 +1,35 @@
+import { Code, Cloud, Database, BarChart3, Settings, Brain } from "lucide-react";
+
 const Skills = () => {
   const skillCategories = [
     {
       title: "Languages & Frameworks",
+      icon: Code,
       skills: ["Python", "R", "SQL", "Java", "Scala", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy"]
     },
     {
       title: "Cloud & Big Data",
-      skills: ["AWS", "Azure", "Apache Spark", "Apache Airflow", "Databricks", "Hadoop", "MapReduce", "Fivetran", "DBT"]
+      icon: Cloud,
+      skills: ["AWS", "Azure", "Apache Spark", "Apache Airflow", "Databricks", "Hadoop", "MapReduce", "Fivetran", "DBT", "DataIKU"]
     },
     {
       title: "Databases & Storage",
+      icon: Database,
       skills: ["Snowflake", "MySQL", "Oracle", "MongoDB", "NoSQL", "S3", "Data Lake", "Cosmos DB"]
     },
     {
       title: "Visualization & Analytics",
+      icon: BarChart3,
       skills: ["Tableau", "PowerBI", "Looker", "MicroStrategy", "Excel", "Matplotlib", "Plotly", "Adobe Analytics"]
     },
     {
       title: "DevOps & Tools",
+      icon: Settings,
       skills: ["Docker", "Kubernetes", "Git", "Travis CI/CD", "JIRA", "Rundeck", "Linux"]
     },
     {
       title: "Data Science & ML",
+      icon: Brain,
       skills: ["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "MLOps", "Statistical Analysis", "Hypothesis Testing", "Forecasting"]
     }
   ];
@@ -34,11 +42,16 @@ const Skills = () => {
         </h2>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => (
-            <div key={index} className="bg-section-bg p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-foreground mb-6">
-                {category.title}
-              </h3>
+          {skillCategories.map((category, index) => {
+            const IconComponent = category.icon;
+            return (
+              <div key={index} className="bg-section-bg p-6 rounded-lg">
+                <div className="flex items-center gap-3 mb-6">
+                  <IconComponent className="w-6 h-6 text-primary" />
+                  <h3 className="text-xl font-semibold text-foreground">
+                    {category.title}
+                  </h3>
+                </div>
               
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, i) => (
@@ -50,8 +63,9 @@ const Skills = () => {
                   </span>
                 ))}
               </div>
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
