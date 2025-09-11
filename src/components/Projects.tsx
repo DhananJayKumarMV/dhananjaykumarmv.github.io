@@ -13,6 +13,7 @@ interface GitHubRepo {
   updated_at: string;
   stargazers_count: number;
   forks_count: number;
+  fork: boolean;
 }
 
 interface Project {
@@ -30,6 +31,38 @@ const Projects = () => {
 
   const GITHUB_USERNAME = "DhananJayKumarMV";
 
+  // Hardcoded projects (these take priority over GitHub repos)
+  const hardcodedProjects: Project[] = [
+    {
+      title: "Smart City Analytics",
+      description: "Leveraged Python, Spark, and Pandas to address urban challenges in Vancouver using ML models (GBTRegressor, RandomForest, Linear Regression) to predict housing trends and CO2 emissions",
+      metrics: "Created visualizations with Matplotlib and Folium for policy-making",
+      tags: ["Python", "Machine Learning", "Data Visualization", "Urban Analytics"],
+      github: `https://github.com/${GITHUB_USERNAME}`
+    },
+    {
+      title: "Blog Generation with LLaMA 2",
+      description: "Built a Streamlit app for personalized blog generation using LLaMA 2 (7B), reducing manual content creation by 50%",
+      metrics: "90% accuracy in relevant content generation via LangChain",
+      tags: ["NLP", "LLM", "Automation", "AI"],
+      github: `https://github.com/${GITHUB_USERNAME}`
+    },
+    {
+      title: "Multiclass Disease Classification",
+      description: "Advanced machine learning system for medical diagnosis using deep learning techniques for accurate disease classification",
+      metrics: "High precision multi-class classification model",
+      tags: ["Deep Learning", "Healthcare", "Classification", "TensorFlow"],
+      github: "https://github.com/DhananJayKumarMV/Multiclass_Disease_Classification"
+    },
+    {
+      title: "Customer Segmentation Analysis",
+      description: "Comprehensive customer segmentation solution using unsupervised learning techniques to identify distinct customer groups and behaviors",
+      metrics: "Enhanced marketing targeting efficiency",
+      tags: ["Clustering", "Customer Analytics", "Machine Learning", "Business Intelligence"],
+      github: "https://github.com/DhananJayKumarMV/Customer_Segmentation"
+    }
+  ];
+
   useEffect(() => {
     const fetchGitHubProjects = async () => {
       try {
@@ -42,13 +75,18 @@ const Projects = () => {
 
         const repos: GitHubRepo[] = await response.json();
         
-        // Filter out forks and sort by stars/recent activity
+        // Filter out forks, .github.io repos, and repos without descriptions
+        // Only include repos owned by the user (not forked)
         const filteredRepos = repos
-          .filter(repo => !repo.name.includes('.github.io') && repo.description && repo.name !== GITHUB_USERNAME)
-          .sort((a, b) => b.stargazers_count - a.stargazers_count || new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
-          .slice(0, 6); // Show top 6 projects
+          .filter(repo => 
+            !repo.fork && // Not a fork
+            !repo.name.includes('.github.io') && // Not a GitHub Pages repo
+            repo.description && // Has a description
+            repo.name !== GITHUB_USERNAME // Not the username repo
+          )
+          .sort((a, b) => b.stargazers_count - a.stargazers_count || new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
 
-        const transformedProjects: Project[] = filteredRepos.map(repo => ({
+        const gitHubProjects: Project[] = filteredRepos.map(repo => ({
           title: repo.name.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
           description: repo.description || "GitHub repository with source code and documentation",
           metrics: `${repo.stargazers_count} stars • ${repo.forks_count} forks • Updated ${new Date(repo.updated_at).toLocaleDateString()}`,
@@ -59,29 +97,30 @@ const Projects = () => {
           github: repo.html_url
         }));
 
-        setProjects(transformedProjects);
+        // Create a set of hardcoded project titles for duplicate checking
+        const hardcodedTitles = new Set(
+          hardcodedProjects.map(project => 
+            project.title.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9]/g, '')
+          )
+        );
+
+        // Filter out GitHub projects that are duplicates of hardcoded ones
+        const uniqueGitHubProjects = gitHubProjects.filter(gitProject => {
+          const normalizedTitle = gitProject.title.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9]/g, '');
+          return !hardcodedTitles.has(normalizedTitle);
+        });
+
+        // Combine hardcoded projects with unique GitHub projects
+        const combinedProjects = [...hardcodedProjects, ...uniqueGitHubProjects];
+        
+        setProjects(combinedProjects);
         setError(null);
       } catch (err) {
         console.error('Error fetching GitHub repositories:', err);
         setError('Failed to load projects from GitHub');
         
-        // Fallback to static projects if API fails
-        setProjects([
-          {
-            title: "Smart City Analytics",
-            description: "Leveraged Python, Spark, and Pandas to address urban challenges in Vancouver using ML models (GBTRegressor, RandomForest, Linear Regression) to predict housing trends and CO2 emissions",
-            metrics: "Created visualizations with Matplotlib and Folium for policy-making",
-            tags: ["Python", "Machine Learning", "Data Visualization", "Urban Analytics"],
-            github: `https://github.com/${GITHUB_USERNAME}`
-          },
-          {
-            title: "Blog Generation with LLaMA 2",
-            description: "Built a Streamlit app for personalized blog generation using LLaMA 2 (7B), reducing manual content creation by 50%",
-            metrics: "90% accuracy in relevant content generation via LangChain",
-            tags: ["NLP", "LLM", "Automation", "AI"],
-            github: `https://github.com/${GITHUB_USERNAME}`
-          }
-        ]);
+        // Fallback to hardcoded projects only if API fails
+        setProjects(hardcodedProjects);
       } finally {
         setLoading(false);
       }
