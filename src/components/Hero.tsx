@@ -33,7 +33,15 @@ const Hero = () => {
           <Button 
             variant="default" 
             className="flex items-center gap-2"
-            onClick={() => window.open('/resume.pdf', '_blank')}
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = '/resume.pdf';
+              link.download = 'DhananjayaKumarMittapall_resume.pdf';
+              link.style.display = 'none';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
           >
             <Download className="w-4 h-4" />
             Download Resume (PDF)
