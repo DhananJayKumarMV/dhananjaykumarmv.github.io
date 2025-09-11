@@ -10,7 +10,7 @@ const About = () => {
           <div className="lg:w-1/3 flex justify-center">
             <div className="w-64 h-64 rounded-2xl overflow-hidden">
               <img 
-                src="/lovable-uploads/f99e2395-b752-4726-9553-f99996e5df56.png" 
+                src="/lovable-uploads/b2596a93-a19f-4ef4-96ee-d9044b29a314.png" 
                 alt="Dhananjaya Kumar Mittapalli" 
                 className="w-full h-full object-cover"
               />

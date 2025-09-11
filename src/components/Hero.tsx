@@ -7,8 +7,12 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto text-center">
         {/* Avatar */}
         <div className="mb-8">
-          <div className="w-32 h-32 rounded-full bg-avatar-bg flex items-center justify-center mx-auto mb-6">
-            <span className="text-4xl font-semibold text-avatar-text">DM</span>
+          <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6">
+            <img 
+              src="/lovable-uploads/b2596a93-a19f-4ef4-96ee-d9044b29a314.png" 
+              alt="Dhananjaya Kumar Mittapalli" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 
