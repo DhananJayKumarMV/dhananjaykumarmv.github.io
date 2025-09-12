@@ -2,7 +2,7 @@ import AnimeHero from "@/components/AnimeHero";
 import AnimeFavorites from "@/components/AnimeFavorites";
 import AnimeShowcase from "@/components/AnimeShowcase";
 
-const AnimeDemo = () => {
+const Anime = () => {
   return (
     <div className="min-h-screen">
       <AnimeHero />
@@ -12,4 +12,4 @@ const AnimeDemo = () => {
   );
 };
 
-export default AnimeDemo;
+export default Anime;

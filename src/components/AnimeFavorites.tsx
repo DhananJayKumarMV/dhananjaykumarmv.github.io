@@ -1,6 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Star, Trophy } from "lucide-react";
+import narutoImage from "@/assets/naruto-poster.jpg";
+import onepieceImage from "@/assets/onepiece-poster.jpg";
+import aotImage from "@/assets/aot-poster.jpg";
+import demonslayerImage from "@/assets/demonslayer-poster.jpg";
+import fmaImage from "@/assets/fma-poster.jpg";
 
 const AnimeFavorites = () => {
   const topAnime = [
@@ -11,8 +16,9 @@ const AnimeFavorites = () => {
       year: "2002",
       genre: ["Action", "Adventure", "Ninja"],
       rating: 9.9,
-      color: "from-orange-400 to-yellow-600",
-      icon: "🍥",
+      rankColor: "bg-orange-500",
+      rankTextColor: "text-white",
+      image: narutoImage,
       reason: "Taught me that hard work and never giving up can overcome any obstacle. Believe it!"
     },
     {
@@ -22,8 +28,9 @@ const AnimeFavorites = () => {
       year: "1999",
       genre: ["Adventure", "Comedy", "Shounen"],
       rating: 9.8,
-      color: "from-red-500 to-red-700",
-      icon: "👒",
+      rankColor: "bg-red-500",
+      rankTextColor: "text-white",
+      image: onepieceImage,
       reason: "An epic adventure about friendship, dreams, and never giving up on becoming the Pirate King."
     },
     {
@@ -33,8 +40,9 @@ const AnimeFavorites = () => {
       year: "2013",
       genre: ["Action", "Drama", "Military"],
       rating: 9.7,
-      color: "from-gray-600 to-green-700",
-      icon: "🗡️",
+      rankColor: "bg-green-700",
+      rankTextColor: "text-white",
+      image: aotImage,
       reason: "Mind-blowing plot twists and philosophical questions about freedom and humanity's survival."
     },
     {
@@ -44,8 +52,9 @@ const AnimeFavorites = () => {
       year: "2019",
       genre: ["Action", "Historical", "Supernatural"],
       rating: 9.6,
-      color: "from-teal-400 to-cyan-600",
-      icon: "🌸",
+      rankColor: "bg-teal-500",
+      rankTextColor: "text-white",
+      image: demonslayerImage,
       reason: "Breathtaking animation and a touching story of family bonds and determination."
     },
     {
@@ -55,8 +64,9 @@ const AnimeFavorites = () => {
       year: "2003",
       genre: ["Adventure", "Military", "Supernatural"],
       rating: 9.5,
-      color: "from-amber-500 to-red-600",
-      icon: "⚗️",
+      rankColor: "bg-amber-600",
+      rankTextColor: "text-white",
+      image: fmaImage,
       reason: "A masterful tale of sacrifice, equivalent exchange, and the bonds between brothers."
     }
   ];
@@ -88,13 +98,17 @@ const AnimeFavorites = () => {
             >
               <CardContent className="p-8">
                 <div className="flex flex-col lg:flex-row items-start gap-8">
-                  {/* Rank & Icon */}
-                  <div className="flex flex-col items-center space-y-4 lg:min-w-[120px]">
-                    <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${anime.color} flex items-center justify-center text-white font-bold text-2xl shadow-lg`}>
+                  {/* Rank & Poster */}
+                  <div className="flex flex-col items-center space-y-4 lg:min-w-[160px]">
+                    <div className={`w-16 h-16 rounded-full ${anime.rankColor} flex items-center justify-center ${anime.rankTextColor} font-bold text-2xl shadow-lg`}>
                       #{anime.rank}
                     </div>
-                    <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
-                      {anime.icon}
+                    <div className="w-32 h-44 rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 shadow-xl">
+                      <img 
+                        src={anime.image} 
+                        alt={`${anime.title} poster`}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
 
@@ -143,11 +157,11 @@ const AnimeFavorites = () => {
 
         {/* Bottom Quote */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-blue-600/20 rounded-2xl p-8 border-2 border-gradient-to-r from-purple-400 via-pink-400 to-blue-400 shadow-2xl shadow-purple-500/20">
+          <div className="bg-gradient-to-r from-purple-600/30 via-pink-600/30 to-blue-600/30 rounded-2xl p-8 border-2 border-purple-400/50 shadow-2xl shadow-purple-500/30">
             <blockquote className="text-xl italic text-white font-medium mb-4 leading-relaxed">
               "Anime isn't just entertainment—it's a lens through which we can explore the depths of human emotion, the power of perseverance, and the beauty of imagination."
             </blockquote>
-            <div className="text-yellow-400 font-bold text-lg bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+            <div className="text-yellow-300 font-bold text-lg">
               — My Philosophy as an Anime Developer
             </div>
           </div>

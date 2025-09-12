@@ -24,11 +24,19 @@ const About = () => {
               I have hands-on experience building scalable data solutions and automating complex workflows.
             </p>
             
-            <p>
+            <p className="mb-6">
               My professional journey spans across various industries where I've successfully implemented 
               data-driven solutions, developed predictive models, and created actionable insights that drive 
               business decisions. I bring hands-on experience with Python, R, SQL, cloud technologies, 
               and AI frameworks — applying them in real-world projects across analytics, automation, and intelligent systems.
+            </p>
+            
+            <p>
+              I'm also an anime fan and you can find what I like{" "}
+              <a href="/anime" className="text-primary hover:text-primary/80 underline font-medium">
+                here
+              </a>
+              .
             </p>
           </div>
         </div>
