@@ -114,7 +114,7 @@ const AnimeHero = () => {
         {/* Stats Preview */}
         <div className="mt-16 grid grid-cols-3 gap-8 animate-fade-in animation-delay-2000">
           <div className="text-center">
-            <div className="text-3xl font-bold text-pink-400 mb-2">500+</div>
+            <div className="text-3xl font-bold text-pink-400 mb-2">200+</div>
             <div className="text-purple-200 text-sm">Anime Watched</div>
           </div>
           <div className="text-center">

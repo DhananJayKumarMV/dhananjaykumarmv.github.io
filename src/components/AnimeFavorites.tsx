@@ -6,47 +6,58 @@ const AnimeFavorites = () => {
   const topAnime = [
     {
       rank: 1,
-      title: "Spirited Away",
-      director: "Hayao Miyazaki",
-      year: "2001",
-      genre: ["Adventure", "Family", "Supernatural"],
-      rating: 10,
-      color: "from-emerald-400 to-teal-600",
-      icon: "🐉",
-      reason: "A masterpiece that taught me that growing up doesn't mean losing your sense of wonder."
+      title: "Naruto",
+      director: "Pierrot",
+      year: "2002",
+      genre: ["Action", "Adventure", "Ninja"],
+      rating: 9.9,
+      color: "from-orange-400 to-yellow-600",
+      icon: "🍥",
+      reason: "Taught me that hard work and never giving up can overcome any obstacle. Believe it!"
     },
     {
       rank: 2,
-      title: "Attack on Titan",
-      director: "Wit Studio",
-      year: "2013",
-      genre: ["Action", "Drama", "Military"],
-      rating: 9.8,
-      color: "from-red-400 to-orange-600",
-      icon: "⚔️",
-      reason: "Mind-blowing plot twists and philosophical questions about freedom and humanity."
-    },
-    {
-      rank: 3,
-      title: "Your Name",
-      director: "Makoto Shinkai",
-      year: "2016",
-      genre: ["Romance", "Drama", "Supernatural"],
-      rating: 9.7,
-      color: "from-purple-400 to-pink-600",
-      icon: "🌟",
-      reason: "Beautiful animation and a love story that transcends time and space."
-    },
-    {
-      rank: 4,
       title: "One Piece",
       director: "Toei Animation",
       year: "1999",
       genre: ["Adventure", "Comedy", "Shounen"],
+      rating: 9.8,
+      color: "from-red-500 to-red-700",
+      icon: "👒",
+      reason: "An epic adventure about friendship, dreams, and never giving up on becoming the Pirate King."
+    },
+    {
+      rank: 3,
+      title: "Attack on Titan",
+      director: "Wit Studio",
+      year: "2013",
+      genre: ["Action", "Drama", "Military"],
+      rating: 9.7,
+      color: "from-gray-600 to-green-700",
+      icon: "🗡️",
+      reason: "Mind-blowing plot twists and philosophical questions about freedom and humanity's survival."
+    },
+    {
+      rank: 4,
+      title: "Demon Slayer",
+      director: "Ufotable",
+      year: "2019",
+      genre: ["Action", "Historical", "Supernatural"],
+      rating: 9.6,
+      color: "from-teal-400 to-cyan-600",
+      icon: "🌸",
+      reason: "Breathtaking animation and a touching story of family bonds and determination."
+    },
+    {
+      rank: 5,
+      title: "Full Metal Alchemist",
+      director: "Bones",
+      year: "2003",
+      genre: ["Adventure", "Military", "Supernatural"],
       rating: 9.5,
-      color: "from-blue-400 to-cyan-600",
-      icon: "🏴‍☠️",
-      reason: "An epic adventure about friendship, dreams, and never giving up."
+      color: "from-amber-500 to-red-600",
+      icon: "⚗️",
+      reason: "A masterful tale of sacrifice, equivalent exchange, and the bonds between brothers."
     }
   ];
 
@@ -132,11 +143,13 @@ const AnimeFavorites = () => {
 
         {/* Bottom Quote */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 rounded-2xl p-8 border border-primary/20">
-            <blockquote className="text-xl italic text-muted-foreground mb-4">
+          <div className="bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-blue-600/20 rounded-2xl p-8 border-2 border-gradient-to-r from-purple-400 via-pink-400 to-blue-400 shadow-2xl shadow-purple-500/20">
+            <blockquote className="text-xl italic text-white font-medium mb-4 leading-relaxed">
               "Anime isn't just entertainment—it's a lens through which we can explore the depths of human emotion, the power of perseverance, and the beauty of imagination."
             </blockquote>
-            <div className="text-primary font-medium">— My Philosophy as an Anime Developer</div>
+            <div className="text-yellow-400 font-bold text-lg bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+              — My Philosophy as an Anime Developer
+            </div>
           </div>
         </div>
       </div>
