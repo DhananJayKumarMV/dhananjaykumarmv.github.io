@@ -69,7 +69,7 @@ const AnimeHero = () => {
             </span>
             <br />
             <span className="text-white">
-              Developer
+              Enthusiast
             </span>
           </h1>
           <div className="flex items-center justify-center gap-2 text-xl text-purple-200 animate-fade-in animation-delay-500">

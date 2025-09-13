@@ -4,6 +4,21 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Heart, Star, PlayCircle, Sparkles } from "lucide-react";
 
+// Import anime posters
+import waterMagicianImage from "@/assets/water-magician.jpg";
+import dandadanImage from "@/assets/dandadan.jpg";
+import drstoneImage from "@/assets/drstone.jpg";
+import aotImage from "@/assets/aot-poster.jpg";
+import deathNoteImage from "@/assets/death-note.jpg";
+import soloLevelingImage from "@/assets/solo-leveling.jpg";
+import fmaImage from "@/assets/fma-poster.jpg";
+import myHeroAcademiaImage from "@/assets/my-hero-academia.jpg";
+import demonslayerImage from "@/assets/demonslayer-poster.jpg";
+import jujutsuKaisenImage from "@/assets/jujutsu-kaisen.jpg";
+import chainsawManImage from "@/assets/chainsaw-man.jpg";
+import onepieceImage from "@/assets/onepiece-poster.jpg";
+import narutoImage from "@/assets/naruto-poster.jpg";
+
 interface Anime {
   id: number;
   title: string;
@@ -20,35 +35,35 @@ const AnimeShowcase = () => {
   // Updated anime data based on user's preferences
   const animeList: Anime[] = [
     // Currently Watching
-    { id: 1, title: "The Water Magician", rating: 8.5, status: "watching", genre: ["Fantasy", "Magic"], image: "💧", description: "A powerful magician's journey through water magic mastery." },
-    { id: 2, title: "Dan da dan", rating: 8.8, status: "watching", genre: ["Supernatural", "Comedy"], image: "👻", description: "Occult and alien encounters with supernatural comedy." },
-    { id: 3, title: "Dr Stone", rating: 9.1, status: "watching", genre: ["Sci-Fi", "Adventure"], image: "🧪", description: "Rebuilding civilization with the power of science." },
-    { id: 4, title: "I Was Reincarnated as the 7th Prince", rating: 8.3, status: "watching", genre: ["Fantasy", "Isekai"], image: "👑", description: "A prince perfecting magical abilities in another world." },
-    { id: 5, title: "The Rising of the Shield Hero", rating: 8.9, status: "watching", genre: ["Isekai", "Adventure"], image: "🛡️", description: "A hero's journey with only a shield as his weapon." },
-    { id: 6, title: "Sakamoto Days", rating: 8.7, status: "watching", genre: ["Action", "Comedy"], image: "🔫", description: "A retired assassin's daily life adventures." },
-    { id: 7, title: "One Piece", rating: 9.8, status: "watching", genre: ["Adventure", "Shounen"], image: "👒", description: "Epic pirate adventure to find the ultimate treasure." },
-    { id: 8, title: "Gachiakuta", rating: 8.4, status: "watching", genre: ["Action", "Fantasy"], image: "⚙️", description: "A world where trash becomes power." },
-    { id: 9, title: "To be Hero X", rating: 8.2, status: "watching", genre: ["Comedy", "Superhero"], image: "🦸", description: "Unconventional superhero adventures." },
-    { id: 10, title: "Kaiju No 8", rating: 8.9, status: "watching", genre: ["Action", "Military"], image: "🦖", description: "Humanity's fight against giant monsters." },
-    { id: 11, title: "Chainsaw Man", rating: 9.3, status: "watching", genre: ["Action", "Supernatural"], image: "🪚", description: "Devilish powers in a dark modern world." },
+    { id: 1, title: "The Water Magician", rating: 8.5, status: "watching", genre: ["Fantasy", "Magic"], image: waterMagicianImage, description: "A powerful magician's journey through water magic mastery." },
+    { id: 2, title: "Dan da dan", rating: 8.8, status: "watching", genre: ["Supernatural", "Comedy"], image: dandadanImage, description: "Occult and alien encounters with supernatural comedy." },
+    { id: 3, title: "Dr Stone", rating: 9.1, status: "watching", genre: ["Sci-Fi", "Adventure"], image: drstoneImage, description: "Rebuilding civilization with the power of science." },
+    { id: 4, title: "I Was Reincarnated as the 7th Prince", rating: 8.3, status: "watching", genre: ["Fantasy", "Isekai"], image: narutoImage, description: "A prince perfecting magical abilities in another world." },
+    { id: 5, title: "The Rising of the Shield Hero", rating: 8.9, status: "watching", genre: ["Isekai", "Adventure"], image: narutoImage, description: "A hero's journey with only a shield as his weapon." },
+    { id: 6, title: "Sakamoto Days", rating: 8.7, status: "watching", genre: ["Action", "Comedy"], image: narutoImage, description: "A retired assassin's daily life adventures." },
+    { id: 7, title: "One Piece", rating: 9.8, status: "watching", genre: ["Adventure", "Shounen"], image: onepieceImage, description: "Epic pirate adventure to find the ultimate treasure." },
+    { id: 8, title: "Gachiakuta", rating: 8.4, status: "watching", genre: ["Action", "Fantasy"], image: narutoImage, description: "A world where trash becomes power." },
+    { id: 9, title: "To be Hero X", rating: 8.2, status: "watching", genre: ["Comedy", "Superhero"], image: narutoImage, description: "Unconventional superhero adventures." },
+    { id: 10, title: "Kaiju No 8", rating: 8.9, status: "watching", genre: ["Action", "Military"], image: narutoImage, description: "Humanity's fight against giant monsters." },
+    { id: 11, title: "Chainsaw Man", rating: 9.3, status: "watching", genre: ["Action", "Supernatural"], image: chainsawManImage, description: "Devilish powers in a dark modern world." },
     
     // Completed
-    { id: 12, title: "Attack on Titan", rating: 9.7, status: "completed", genre: ["Action", "Drama"], image: "🗡️", description: "Humanity's fight for survival against titans." },
-    { id: 13, title: "Death Note", rating: 9.5, status: "completed", genre: ["Psychological", "Thriller"], image: "📓", description: "A supernatural notebook that kills anyone whose name is written in it." },
-    { id: 14, title: "Solo Leveling", rating: 9.4, status: "completed", genre: ["Action", "Fantasy"], image: "⚔️", description: "A weak hunter becomes the world's strongest." },
-    { id: 15, title: "Bleach", rating: 9.0, status: "completed", genre: ["Action", "Supernatural"], image: "👻", description: "Soul reaper's battle against evil spirits." },
-    { id: 16, title: "Full Metal Alchemist", rating: 9.8, status: "completed", genre: ["Adventure", "Military"], image: "⚗️", description: "Brothers' quest for the philosopher's stone." },
-    { id: 17, title: "My Hero Academia", rating: 9.2, status: "completed", genre: ["Superhero", "School"], image: "💪", description: "A world where everyone has superpowers." },
-    { id: 18, title: "Sword Art Online", rating: 8.6, status: "completed", genre: ["Virtual Reality", "Romance"], image: "🎮", description: "Trapped in a virtual MMORPG world." },
-    { id: 19, title: "Shangri-La Frontier", rating: 8.8, status: "completed", genre: ["Gaming", "Adventure"], image: "🎯", description: "Professional gamer tackles a legendary VRMMO." },
-    { id: 20, title: "Demon Lord 2099", rating: 8.3, status: "completed", genre: ["Sci-Fi", "Fantasy"], image: "👹", description: "Demon lord awakens in a futuristic world." },
-    { id: 21, title: "Blue Lock", rating: 9.1, status: "completed", genre: ["Sports", "Drama"], image: "⚽", description: "Elite soccer training program to find Japan's best striker." },
-    { id: 22, title: "My Star", rating: 8.7, status: "completed", genre: ["Romance", "Drama"], image: "⭐", description: "Entertainment industry romance and ambitions." },
-    { id: 23, title: "Tsukimichi-Moonlight Fantasy", rating: 8.5, status: "completed", genre: ["Isekai", "Fantasy"], image: "🌙", description: "Transported to another world by a moon goddess." },
-    { id: 24, title: "Re:Monster", rating: 8.2, status: "completed", genre: ["Isekai", "Action"], image: "👹", description: "Reincarnated as a goblin with special abilities." },
-    { id: 25, title: "Jujutsu Kaisen", rating: 9.3, status: "completed", genre: ["Supernatural", "Action"], image: "👊", description: "Students fighting cursed spirits with jujutsu sorcery." },
-    { id: 26, title: "Demon Slayer", rating: 9.6, status: "completed", genre: ["Action", "Historical"], image: "🌸", description: "A boy's quest to save his demon sister." },
-    { id: 27, title: "Black Clover", rating: 8.9, status: "completed", genre: ["Magic", "Adventure"], image: "🍀", description: "A magic-less boy aims to become the Wizard King." }
+    { id: 12, title: "Attack on Titan", rating: 9.7, status: "completed", genre: ["Action", "Drama"], image: aotImage, description: "Humanity's fight for survival against titans." },
+    { id: 13, title: "Death Note", rating: 9.5, status: "completed", genre: ["Psychological", "Thriller"], image: deathNoteImage, description: "A supernatural notebook that kills anyone whose name is written in it." },
+    { id: 14, title: "Solo Leveling", rating: 9.4, status: "completed", genre: ["Action", "Fantasy"], image: soloLevelingImage, description: "A weak hunter becomes the world's strongest." },
+    { id: 15, title: "Bleach", rating: 9.0, status: "completed", genre: ["Action", "Supernatural"], image: narutoImage, description: "Soul reaper's battle against evil spirits." },
+    { id: 16, title: "Full Metal Alchemist", rating: 9.8, status: "completed", genre: ["Adventure", "Military"], image: fmaImage, description: "Brothers' quest for the philosopher's stone." },
+    { id: 17, title: "My Hero Academia", rating: 9.2, status: "completed", genre: ["Superhero", "School"], image: myHeroAcademiaImage, description: "A world where everyone has superpowers." },
+    { id: 18, title: "Sword Art Online", rating: 8.6, status: "completed", genre: ["Virtual Reality", "Romance"], image: narutoImage, description: "Trapped in a virtual MMORPG world." },
+    { id: 19, title: "Shangri-La Frontier", rating: 8.8, status: "completed", genre: ["Gaming", "Adventure"], image: narutoImage, description: "Professional gamer tackles a legendary VRMMO." },
+    { id: 20, title: "Demon Lord 2099", rating: 8.3, status: "completed", genre: ["Sci-Fi", "Fantasy"], image: narutoImage, description: "Demon lord awakens in a futuristic world." },
+    { id: 21, title: "Blue Lock", rating: 9.1, status: "completed", genre: ["Sports", "Drama"], image: narutoImage, description: "Elite soccer training program to find Japan's best striker." },
+    { id: 22, title: "My Star", rating: 8.7, status: "completed", genre: ["Romance", "Drama"], image: narutoImage, description: "Entertainment industry romance and ambitions." },
+    { id: 23, title: "Tsukimichi-Moonlight Fantasy", rating: 8.5, status: "completed", genre: ["Isekai", "Fantasy"], image: narutoImage, description: "Transported to another world by a moon goddess." },
+    { id: 24, title: "Re:Monster", rating: 8.2, status: "completed", genre: ["Isekai", "Action"], image: narutoImage, description: "Reincarnated as a goblin with special abilities." },
+    { id: 25, title: "Jujutsu Kaisen", rating: 9.3, status: "completed", genre: ["Supernatural", "Action"], image: jujutsuKaisenImage, description: "Students fighting cursed spirits with jujutsu sorcery." },
+    { id: 26, title: "Demon Slayer", rating: 9.6, status: "completed", genre: ["Action", "Historical"], image: demonslayerImage, description: "A boy's quest to save his demon sister." },
+    { id: 27, title: "Black Clover", rating: 8.9, status: "completed", genre: ["Magic", "Adventure"], image: narutoImage, description: "A magic-less boy aims to become the Wizard King." }
   ];
 
   const filteredAnime = animeList.filter(anime => anime.status === selectedTab);
@@ -116,8 +131,12 @@ const AnimeShowcase = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader className="text-center">
-                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {anime.image}
+                <div className="w-full h-32 mb-4 rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-300">
+                  <img 
+                    src={anime.image} 
+                    alt={`${anime.title} poster`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">
                   {anime.title}

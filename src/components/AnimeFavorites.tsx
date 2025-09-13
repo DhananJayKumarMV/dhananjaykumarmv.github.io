@@ -116,10 +116,10 @@ const AnimeFavorites = () => {
                   <div className="flex-1 space-y-4">
                     <div className="flex items-start justify-between">
                       <div>
-                        <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                        <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors">
                           {anime.title}
                         </h3>
-                        <p className="text-muted-foreground">
+                        <p className="text-gray-200">
                           {anime.director} • {anime.year}
                         </p>
                       </div>
@@ -143,7 +143,7 @@ const AnimeFavorites = () => {
                     <div className="bg-slate-800/30 rounded-lg p-4 border-l-4 border-primary/50">
                       <div className="flex items-start gap-3">
                         <Heart className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />
-                        <p className="text-muted-foreground italic leading-relaxed">
+                        <p className="text-gray-200 italic leading-relaxed">
                           "{anime.reason}"
                         </p>
                       </div>
