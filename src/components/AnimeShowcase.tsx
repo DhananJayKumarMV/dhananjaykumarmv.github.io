@@ -131,7 +131,7 @@ const AnimeShowcase = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader className="text-center">
-                <div className="w-full h-32 mb-4 rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-300">
+                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <img 
                     src={anime.image} 
                     alt={`${anime.title} poster`}

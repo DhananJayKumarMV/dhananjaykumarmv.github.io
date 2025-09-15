@@ -162,7 +162,7 @@ const AnimeFavorites = () => {
               "Anime isn't just entertainment—it's a lens through which we can explore the depths of human emotion, the power of perseverance, and the beauty of imagination."
             </blockquote>
             <div className="text-yellow-300 font-bold text-lg">
-              — My Philosophy as an Anime Developer
+              — My Philosophy as an Anime Enthusiast
             </div>
           </div>
         </div>
