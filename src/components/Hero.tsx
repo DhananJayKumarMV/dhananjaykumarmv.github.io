@@ -54,28 +54,34 @@ const Hero = () => {
           <Button 
             variant="outline" 
             className="flex items-center gap-2"
-            onClick={() => window.open('https://github.com/DhananJayKumarMV', '_blank')}
+            asChild
           >
-            <Github className="w-4 h-4" />
-            GitHub
+            <a href="https://github.com/DhananJayKumarMV" target="_blank" rel="noopener noreferrer">
+              <Github className="w-4 h-4" />
+              GitHub
+            </a>
           </Button>
           
           <Button 
             variant="outline" 
             className="flex items-center gap-2"
-            onClick={() => window.open('https://www.linkedin.com/in/dhananjaya-kumar-venkata-mittapalli/', '_blank')}
+            asChild
           >
-            <Linkedin className="w-4 h-4" />
-            LinkedIn
+            <a href="https://www.linkedin.com/in/dhananjaya-kumar-venkata-mittapalli/" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="w-4 h-4" />
+              LinkedIn
+            </a>
           </Button>
           
           <Button 
             variant="outline" 
             className="flex items-center gap-2"
-            onClick={() => window.open('mailto:mittapalli.d@northeastern.edu')}
+            asChild
           >
-            <Mail className="w-4 h-4" />
-            Email Me
+            <a href="mailto:mittapalli.d@northeastern.edu">
+              <Mail className="w-4 h-4" />
+              Email Me
+            </a>
           </Button>
         </div>
       </div>
