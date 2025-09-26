@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Anime from "./pages/Anime";
 
+// React Query Client
 const queryClient = new QueryClient();
 
 const App = () => (
