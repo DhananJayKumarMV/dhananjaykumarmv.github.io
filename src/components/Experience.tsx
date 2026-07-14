@@ -1,37 +1,58 @@
 const Experience = () => {
   const experiences = [
     {
+      company: "Community Dreams Foundation",
+      title: "Data Engineer",
+      location: "San Francisco, CA",
+      period: "Feb 2026 - Present",
+      achievements: [
+        "Built and validated classification models in Python and SQL for a production ML investor ranking system, achieving over 80% accuracy and reducing deal preparation time through automated, data-driven targeting",
+        "Automated end-to-end pricing optimization workflows in Python and SQL, building regression and forecasting pipelines with ~80% model fit and reducing manual analysis effort by 70%",
+        "Built predictive and causal inference pipelines for price elasticity and demand forecasting, contributing to a 15% increase in sales",
+        "Designed and deployed time series forecasting pipelines to estimate field service parts demand, reducing stockouts by 20%",
+        "Built and deployed executive Tableau dashboards delivering daily, weekly, and monthly operational metrics across service, operations, and leadership teams"
+      ],
+      impact: "80%+ model accuracy, 70% less manual analysis effort, 15% increase in sales, 20% fewer stockouts"
+    },
+    {
       company: "Natixis Investment Managers",
-      title: "Data Science Engineer",
+      title: "Data Engineer",
       location: "Boston, MA, USA",
       period: "Jan 2025 - Aug 2025",
       achievements: [
-        "Developed a conversion attribution model to evaluate marketing-driven lead performance, enabling Sales to prioritize profitable client segments",
-        "Engineered orchestration workflows using SQL, Python, and Rundeck to automate revenue pipeline refreshes"
+        "Architected a real-time data warehouse ingestion layer using Python and Apache Kafka, streaming 50,000+ trade and AUM events per second with automated schema validation, reducing data-to-decision latency by 60%",
+        "Designed dbt dimensional and star schema models on Amazon Redshift, standardizing financial KPIs and eliminating 15+ weekly manual reconciliation hours",
+        "Automated ETL workflows and orchestration using Apache Airflow (Cloud Composer) on GCP, reducing daily reporting cycles by 40%",
+        "Built an AI-augmented data quality monitoring system with anomaly severity classification, reducing false positive alert noise by 70% and achieving 100% SLA adherence",
+        "Defined event logging schemas and data governance standards for 8 C-suite reporting datasets in Snowflake, enabling full data lineage documentation for audit compliance"
       ],
-      impact: "15% increase in lead conversion rates, 40% faster daily reporting cycles"
+      impact: "60% lower data-to-decision latency, 40% faster reporting cycles, 100% SLA adherence"
     },
     {
       company: "SaksOFF5th",
-      title: "Supply Chain Business Insight Engineer",
+      title: "Business Insight Engineer",
       location: "Bangalore, India",
       period: "May 2022 - Aug 2023",
       achievements: [
-        "Developed supply chain data architecture and performed statistical analysis to derive actionable insights",
-        "Used SQL, Python, and Airflow to automate workflows, reducing processing time by 30%"
+        "Engineered a Snowflake data warehouse with dbt star schema models capturing supply chain KPIs across 500K+ daily orders, enabling leadership to greenlight a 2-day delivery rollout",
+        "Productionized an ML-driven carrier scoring model in PySpark replacing a $200K/year third-party tool, cutting fulfillment costs by 10% and carrier data procurement overhead by 95%",
+        "Designed an AI-powered anomaly detection pipeline flagging inventory discrepancies and fraudulent refunds in real time, protecting $1.2M in shrink exposure with 99.7% accuracy",
+        "Automated 20+ ETL batch pipelines via Apache Airflow, reducing report generation from 2 days to 2 hours (75% faster)"
       ],
-      impact: "Enabled launch of business initiatives, reduced report generation from 2 days to 4 hours"
+      impact: "10% lower fulfillment costs, 75% faster reporting, $1.2M in shrink exposure protected"
     },
     {
       company: "TheMathCompany",
-      title: "Data Analyst",
+      title: "Data Engineer",
       location: "Bangalore, India",
       period: "Sep 2020 - May 2022",
       achievements: [
-        "Led a team to productionalize data migration solutions with AWS S3 and automated ETL pipelines via Airflow",
-        "Developed Tableau and MicroStrategy dashboards for marketing KPIs"
+        "Led ETL data migration from legacy Aster and SAS databases to Snowflake with AWS S3 staging via Apache Airflow on Docker and Kubernetes, achieving a 140% increase in pipeline execution speed with <2% downtime",
+        "Led a cross-functional team of 3-4 data engineers, expanding the practice from 1 to 4 engineers and securing 3 new client engagements",
+        "Engineered large-scale ETL pipelines using PySpark and Apache Spark, optimizing partitioning and storage strategies across client environments",
+        "Implemented automated data quality validation and schema enforcement across 30+ ingestion pipelines, achieving 99.7% accuracy and reducing downstream model retraining failures by 40%"
       ],
-      impact: "140% increase in execution speed, <2% downtime, expanded team and projects due to client satisfaction"
+      impact: "140% faster pipeline execution, <2% downtime, team scaled 1 to 4 engineers"
     }
   ];
 

@@ -19,7 +19,7 @@ const Contact = () => {
     // Create mailto link with form data
     const subject = `Contact from ${formData.name}`;
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-    const mailtoLink = `mailto:mittapalli.d@northeastern.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:dhananjayakumarmittapalli@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     window.open(mailtoLink);
     
@@ -66,9 +66,9 @@ const Contact = () => {
               <Button 
                 variant="outline" 
                 className="w-full"
-                onClick={() => window.open('mailto:mittapalli.d@northeastern.edu')}
+                onClick={() => window.open('mailto:dhananjayakumarmittapalli@gmail.com')}
               >
-                mittapalli.d@northeastern.edu
+                dhananjayakumarmittapalli@gmail.com
               </Button>
             </div>
 
@@ -85,7 +85,7 @@ const Contact = () => {
               <Button 
                 variant="outline" 
                 className="w-full"
-                onClick={() => window.open('https://www.linkedin.com/in/dhananjaya-kumar-venkata-mittapalli/', '_blank')}
+                onClick={() => window.open('https://www.linkedin.com/in/dhananjaya-kumar-mittapalli/', '_blank')}
               >
                 View LinkedIn Profile
               </Button>

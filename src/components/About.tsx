@@ -19,18 +19,29 @@ const About = () => {
           
           <div className="lg:w-2/3 prose prose-lg max-w-none text-muted-foreground leading-relaxed">
             <p className="mb-6">
-              I'm a passionate Data Science Engineer with expertise in machine learning, big data processing, 
-              and analytics. Currently pursuing my Master's in Data Science at Northeastern University, 
-              I have hands-on experience building scalable data solutions and automating complex workflows.
+              Data is the foundation, AI is the frontier. I work at the boundary between the two. Data
+              Engineer is the label, though it only covers part of it. I deal in whatever the problem
+              actually needs.
             </p>
-            
+
             <p className="mb-6">
-              My professional journey spans across various industries where I've successfully implemented 
-              data-driven solutions, developed predictive models, and created actionable insights that drive 
-              business decisions. I bring hands-on experience with Python, R, SQL, cloud technologies, 
-              and AI frameworks — applying them in real-world projects across analytics, automation, and intelligent systems.
+              3.5+ years building the unglamorous infrastructure that decides whether a model or a
+              pipeline actually ships: ETL/ELT systems, data warehousing, feature stores, forecasting
+              pipelines, across finance and retail (Natixis Investment Managers, Saks OFF 5th,
+              TheMathCompany).
             </p>
-            
+
+            <p className="mb-6">
+              I ramp up fast. New stacks, new domains, whatever the deadline demands. Right now that's
+              machine learning and agentic AI systems, because that's where the next infrastructure
+              problems are.
+            </p>
+
+            <p className="mb-6">
+              If you're building systems that need to work in production, not just demo well, I'm
+              interested.
+            </p>
+
             <p>
               I'm also an anime fan and you can find what I like{" "}
               <a href="/anime" className="text-primary hover:text-primary/80 underline font-medium">

@@ -65,7 +65,7 @@ const Header = () => {
           <Button 
             variant="outline" 
             size="sm"
-            onClick={() => window.open('mailto:mittapalli.d@northeastern.edu')}
+            onClick={() => window.open('mailto:dhananjayakumarmittapalli@gmail.com')}
           >
             Email Me
           </Button>

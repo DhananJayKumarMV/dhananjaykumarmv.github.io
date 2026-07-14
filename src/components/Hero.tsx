@@ -67,7 +67,7 @@ const Hero = () => {
             className="flex items-center gap-2"
             asChild
           >
-            <a href="https://www.linkedin.com/in/dhananjaya-kumar-venkata-mittapalli/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/dhananjaya-kumar-mittapalli/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="w-4 h-4" />
               LinkedIn
             </a>
@@ -78,7 +78,7 @@ const Hero = () => {
             className="flex items-center gap-2"
             asChild
           >
-            <a href="mailto:mittapalli.d@northeastern.edu">
+            <a href="mailto:dhananjayakumarmittapalli@gmail.com">
               <Mail className="w-4 h-4" />
               Email Me
             </a>
